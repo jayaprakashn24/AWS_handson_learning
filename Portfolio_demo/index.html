@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jayaprakash Devops Engineer</title>
+  <style>
+    :root {
+      --primary-color: #0d6efd;
+      --bg-color: #f4f6f8;
+      --text-color: #333;
+      --card-bg: #fff;
+      --footer-bg: #e9ecef;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --card-bg: #1f1f1f;
+      --footer-bg: #1a1a1a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg-color); color: var(--text-color); scroll-behavior: smooth; }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 { font-size: 2.5em; }
+    header p { font-size: 1.2em; margin-top: 5px; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background: white;
+      color: var(--primary-color);
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 { color: var(--primary-color); margin-bottom: 20px; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover { transform: translateY(-5px); }
+
+    a { color: var(--primary-color); text-decoration: none; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--footer-bg);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <header>
+    <h1>Jayaprakash N</h1>
+    <p>Cloud Security Architect | DevOps | Mentor</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Cloud Security Architect and DevOps professional, helping students prepare for high-paying tech interviews.  
+      Passionate about cloud automation, security, and mentoring the next generation of tech leaders.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Key Skills & Expertise</h2>
+    <div class="cards">
+      <div class="card">AWS Services: S3, EC2, Lambda, CloudFormation, IAM, VPC, CloudWatch</div>
+      <div class="card">DevOps Tools: Jenkins, Docker, Kubernetes, Git, Terraform, Ansible, CI/CD</div>
+      <div class="card">Cloud Security: Audits, IAM Policies, Encryption, Vulnerability Scanning</div>
+      <div class="card">Programming & Scripting: Python, Bash, Shell scripting</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>High-Level Projects</h2>
+    <div class="cards">
+      <div class="card">Automated CI/CD pipeline for microservices using Jenkins, Docker, and Kubernetes.</div>
+      <div class="card">Multi-region AWS infrastructure deployment using Terraform with monitoring & logging.</div>
+      <div class="card">Serverless application on AWS Lambda with API Gateway integration for student management.</div>
+      <div class="card">Security audit automation using Python and AWS Config for compliance checks.</div>
+      <div class="card">Containerized e-commerce platform with automated scaling and monitoring.</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="cards">
+      <div class="card">Email: <a href="mailto:jayaprakashn900@gmail.com">jayaprakashn900@gmail.com</a></div>
+      <div class="card">GitHub: <a href="https://github.com/jayaprakashn24" target="_blank">https://github.com/jayaprakashn24</a></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Jayaprakash N. All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.querySelector('.theme-toggle');
+      if(body.getAttribute('data-theme') === 'light') {
+        body.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️';
+      } else {
+        body.setAttribute('data-theme', 'light');
+        btn.textContent = '🌙';
+      }
+    }
+  </script>
+
+</body>
+</html>
